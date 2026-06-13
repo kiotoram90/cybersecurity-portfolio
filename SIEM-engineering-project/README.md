@@ -50,11 +50,13 @@ The attacking IP was successfully blocked after repeated failed authentication a
 
 ## Security Outcome
 
-This investigation demonstrates a complete SOC workflow:
-- SIEM deployment and monitoring
-- Attack simulation (brute force)
-- Detection through log correlation
-- Automated response and mitigation
+This project demonstrates a full Security Operations Center (SOC) workflow:
+
+- SIEM deployment and configuration (Wazuh)
+- Endpoint monitoring and log collection
+- Attack simulation (Hydra brute force)
+- Detection through log analysis and alerting
+- Automated response and mitigation (Fail2Ban)
 
 ---
 
