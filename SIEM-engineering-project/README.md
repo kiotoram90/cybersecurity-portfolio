@@ -22,7 +22,7 @@ The target system ("playserver") was successfully integrated into the SIEM envir
 
 ## Attack Simulation (Brute Force)
 
-![Hydra Successful](screenshots/Hydra_Correct)
+![Hydra Successful](screenshots/Hydra_Correct.png)
 
 A brute force attack was simulated using Hydra to generate repeated authentication attempts against the target system.
 
@@ -30,21 +30,21 @@ A brute force attack was simulated using Hydra to generate repeated authenticati
 
 ## Detection (Log Analysis & SIEM Alerts)
 
-!
-
-The system recorded multiple failed login attempts, which were detected and correlated by Wazuh.
+![Alert came through](screenshots/Wazuh_brute_force.png)
 
 ---
 
 ## Response (Fail2Ban Mitigation)
 
-!
+![Set up Fail2ban with parameters](screenshots/Fail2ban_status.png)
 
 Fail2Ban was configured to monitor authentication failures and enforce automated blocking rules.
 
-!
+![Malicious IP was blocked/Jailed](screenshots/Fail2ban_jail.png)
 
 The attacking IP was successfully blocked after repeated failed authentication attempts.
+
+[Wazuh dashboard shows failed login attempts](screenshots/Wazuh_Block_hydra.png)
 
 ---
 
