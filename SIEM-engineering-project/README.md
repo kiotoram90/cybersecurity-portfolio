@@ -1,12 +1,12 @@
 # SIEM Security Monitoring & Incident Response Lab (Wazuh)
 
-> SOC Simulation: Attack Detection, Analysis, and Automated Response
+>  SOC Incident Simulation: SIEM Monitoring, Brute Force Detection, and Automated Response (Wazuh + Fail2Ban)
 
 ---
 
 ## Environment Setup (SIEM Monitoring)
 
-![Wazuh Installed](screenshots/Wazuh_Active.png)
+<img src="screenshots/Wazuh_Active.png" width="800" alt="Wazuh dashboard showing active SIEM monitoring"/>
 
 The SIEM environment was configured using Wazuh to collect and monitor logs from connected endpoints.
 
@@ -14,7 +14,7 @@ The SIEM environment was configured using Wazuh to collect and monitor logs from
 
 ## Monitored Endpoint
 
-![Playserver Active](screenshots/Wazuh_Agents.png)
+<img src="screenshots/Wazuh_Agents.png" width="800" alt="Playserver showing active Wazuh agent connection"/>
 
 The target system ("playserver") was successfully integrated into the SIEM environment as a monitored agent.
 
@@ -22,7 +22,7 @@ The target system ("playserver") was successfully integrated into the SIEM envir
 
 ## Attack Simulation (Brute Force)
 
-![Hydra Successful](screenshots/Hydra_Correct.png)
+<img src="screenshots/Hydra_Correct.png" width="800" alt="Hydra brute force attack showing successful login attempts"/>
 
 A brute force attack was simulated using Hydra to generate repeated authentication attempts against the target system.
 
@@ -30,21 +30,21 @@ A brute force attack was simulated using Hydra to generate repeated authenticati
 
 ## Detection (Log Analysis & SIEM Alerts)
 
-![Alert came through](screenshots/Wazuh_brute_force.png)
+<img src="screenshots/Wazuh_brute_force.png" width="800" alt="Wazuh SIEM alert showing brute force detection activity"/>
 
 ---
 
 ## Response (Fail2Ban Mitigation)
 
-![Set up Fail2ban with parameters](screenshots/Fail2ban_status.png)
+<img src="screenshots/Fail2ban_status.png" width="800" alt="Fail2Ban status showing active jail configuration and protection rules"/>
 
 Fail2Ban was configured to monitor authentication failures and enforce automated blocking rules.
 
-![Malicious IP was blocked/Jailed](screenshots/Fail2ban_jail.png)
+<img src="screenshots/Fail2ban_jail.png" width="800" alt="Fail2Ban jail showing malicious IP blocked after repeated failed login attempts"/>
 
 The attacking IP was successfully blocked after repeated failed authentication attempts.
 
-[Wazuh dashboard shows failed login attempts](screenshots/Wazuh_Block_hydra.png)
+<img src="screenshots/Wazuh_Block_hydra.png" width="800" alt="Wazuh dashboard showing failed login attempts from Hydra brute force activity"/>
 
 ---
 
