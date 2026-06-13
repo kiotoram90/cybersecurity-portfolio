@@ -1,47 +1,60 @@
-# SIEM Engineering & Security Monitoring Project (Wazuh)
+# SIEM Security Monitoring & Incident Response Lab (Wazuh)
 
-## Overview
-This project was completed in a controlled cybersecurity training lab environment. The objective was to work with a SIEM system (Wazuh) to monitor security events, analyze logs, and investigate suspicious activity.
-
-This exercise simulates foundational Security Operations Center (SOC) workflows.
+> SOC Simulation: Attack Detection, Analysis, and Automated Response
 
 ---
 
-## Objectives
+## Environment Setup (SIEM Monitoring)
 
-- Understand SIEM architecture and log ingestion
-- Monitor endpoint and system activity
-- Investigate security alerts and anomalies
-- Practice alert triage and validation
-- Develop incident investigation workflow
+!
+
+The SIEM environment was configured using Wazuh to collect and monitor logs from connected endpoints.
 
 ---
 
-## Tools Used
+## Monitored Endpoint
 
-- Wazuh SIEM
-- Linux (Lab Environment)
-- Windows endpoints (Lab Environment)
+!
 
----
-
-## Key Activities
-
-- Reviewed authentication and system logs
-- Investigated generated security alerts
-- Analyzed endpoint activity for anomalies
-- Identified patterns of suspicious behavior in lab data
-- Applied structured alert triage methodology
+The target system ("playserver") was successfully integrated into the SIEM environment as a monitored agent.
 
 ---
 
-## Skills Demonstrated
+## Attack Simulation (Brute Force)
 
-- SIEM monitoring and analysis
-- Security event investigation
-- Alert triage and validation
-- Log interpretation
-- Incident response fundamentals
+!
+
+A brute force attack was simulated using Hydra to generate repeated authentication attempts against the target system.
+
+---
+
+## Detection (Log Analysis & SIEM Alerts)
+
+!
+
+The system recorded multiple failed login attempts, which were detected and correlated by Wazuh.
+
+---
+
+## Response (Fail2Ban Mitigation)
+
+!
+
+Fail2Ban was configured to monitor authentication failures and enforce automated blocking rules.
+
+!
+
+The attacking IP was successfully blocked after repeated failed authentication attempts.
+
+---
+
+## Security Outcome
+
+This investigation demonstrates a complete SOC workflow:
+- SIEM deployment and monitoring
+- Attack simulation (brute force)
+- Detection through log correlation
+- Automated response and mitigation
 
 ---
 
